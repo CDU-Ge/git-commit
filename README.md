@@ -5,7 +5,7 @@ agent skills
 ## install
 
 ```shell
-bunx skills
+bunx skills add ./skills --list
 ```
 
 ## dev
