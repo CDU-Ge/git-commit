@@ -12,6 +12,7 @@ disable-model-invocation: true
 2. 清晰：使用约定式提交规范
 3. 粒度：拆分为小提交而非大提交
 4. 显式：必须指定要提交的文件
+5. 自动：用户要求提交时自动拆分，无需询问
 
 ## 提交格式
 
@@ -46,8 +47,6 @@ git commit -m "feat(api): remove deprecated endpoint
 BREAKING CHANGE: /api/v1/users is no longer supported"
 ```
 
-或使用 `!`：`feat(api)!: remove deprecated endpoint`
-
 ## 提交规范
 
 - 使用动词开头，现在时态（add not added）
@@ -55,19 +54,29 @@ BREAKING CHANGE: /api/v1/users is no longer supported"
 - 结尾不要句号
 - 不超过 50 字符
 
-正确：feat(auth): add OAuth2 support
-错误：Feat(Auth): Added OAuth2 Support.
+正确：feat(auth): add OAuth2 support错误：Feat(Auth): Added OAuth2 Support.
 
 ## 原子性提交
 
 错误：git commit -m "feat: add auth and update tests and fix typo"
 
 正确：
+
 ```bash
 git commit auth.py -m "feat(auth): add OAuth2 login"
 git commit tests/auth_test.py -m "test(auth): add login tests"
 git commit README.md -m "docs(readme): fix typo"
 ```
+
+### 分组规则
+
+按文件类型自动分组：
+
+- 测试文件：`tests/`, `test_*.py`, `*.test.ts`, `*.spec.js`
+- 文档文件：`*.md`, `README`, `CHANGELOG`
+- 配置文件：`*.json`, `*.yaml`, `.*rc`
+- 锁文件：`*-lock.json`, `Cargo.lock`, `poetry.lock`
+- 代码文件：按目录或模块分组
 
 ## 常见场景
 
@@ -89,11 +98,4 @@ git commit README.md -m "docs(readme): add usage examples"
 
 # 修改配置
 git commit .eslintrc.json -m "chore(config): enable no-unused-vars"
-```
-
-## 修改提交
-
-```bash
-git commit --amend -m "corrected message"
-git push --force-with-lease  # 已推送时使用
 ```
