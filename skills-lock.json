@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "git-commit": {
+      "source": "/home/ge/Projects/git-commit/skills/git-commit",
+      "sourceType": "local",
+      "computedHash": "e4b3fae33a27798b06bbbf459d46f1bb01e611b1c27220e8a9416229a82b9bac"
+    }
+  }
+}
