@@ -11,5 +11,5 @@ bunx skills add ./skills --list
 ## dev
 
 ```shell
-bunx skills add https://github.com/anthropics/skills -y --skill skill-creator --agent claude-code
+bunx skills add https://github.com/anthropics/skills  --skill skill-creator
 ```
