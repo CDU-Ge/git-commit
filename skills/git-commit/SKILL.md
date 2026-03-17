@@ -46,8 +46,6 @@ git commit -m "feat(api): remove deprecated endpoint
 BREAKING CHANGE: /api/v1/users is no longer supported"
 ```
 
-或使用 `!`：`feat(api)!: remove deprecated endpoint`
-
 ## 提交规范
 
 - 使用动词开头，现在时态（add not added）
@@ -55,14 +53,14 @@ BREAKING CHANGE: /api/v1/users is no longer supported"
 - 结尾不要句号
 - 不超过 50 字符
 
-正确：feat(auth): add OAuth2 support
-错误：Feat(Auth): Added OAuth2 Support.
+正确：feat(auth): add OAuth2 support错误：Feat(Auth): Added OAuth2 Support.
 
 ## 原子性提交
 
 错误：git commit -m "feat: add auth and update tests and fix typo"
 
 正确：
+
 ```bash
 git commit auth.py -m "feat(auth): add OAuth2 login"
 git commit tests/auth_test.py -m "test(auth): add login tests"
