@@ -6,8 +6,7 @@ disable-model-invocation: true
 
 # Git Commit Guidelines
 
-每当完成一个功能或修复一个 bug 时，编写清晰且有意义的 git commit 信息是非常重要的。
-对于变更，不仅仅要描述"做了什么"，还要解释"为什么这么做"。这有助于团队成员理解代码的历史和意图。
+每当完成一个功能或修复一个 bug 时，编写清晰且有意义的 git commit 信息是非常重要的。对于变更，不仅仅要描述"做了什么"，还要解释"为什么这么做"。这有助于团队成员理解代码的历史和意图。
 
 ## 核心原则
 
@@ -31,7 +30,7 @@ git commit <files> -m "<type>(<scope>): <subject>"
 常用的提交类型：
 
 | 类型 | 说明 | 示例 |
-|------|------|------|
+| --- | --- | --- |
 | `feat` | 新功能 | feat(auth): add OAuth2 login support |
 | `fix` | 修复 bug | fix(api): handle null response correctly |
 | `docs` | 文档变更 | docs(readme): update installation instructions |
@@ -53,13 +52,10 @@ git commit <files> -m "<type>(<scope>): <subject>"
 
 ### 破坏性变更
 
-使用 `!` 或 `BREAKING CHANGE` 标记：
+使用 `BREAKING CHANGE` 标记：
 
 ```bash
-# 方式1: 使用 !
-git commit -m "feat(api)!: remove deprecated endpoint"
-
-# 方式2: 使用 BREAKING CHANGE
+# 使用 BREAKING CHANGE
 git commit -m "feat(api): remove deprecated endpoint
 
 BREAKING CHANGE: The /api/v1/users endpoint is no longer supported"
@@ -70,11 +66,13 @@ BREAKING CHANGE: The /api/v1/users endpoint is no longer supported"
 ### 1. 原子性提交示例
 
 **❌ 不好的做法** - 一个提交包含多个变更：
+
 ```bash
 git commit -m "feat: add user authentication and update tests and fix typo"
 ```
 
 **✅ 好的做法** - 拆分为多个独立提交：
+
 ```bash
 git commit auth.py -m "feat(auth): add OAuth2 login"
 git commit tests/auth_test.py -m "test(auth): add login tests"
