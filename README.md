@@ -5,7 +5,7 @@ agent skills
 ## install
 
 ```shell
-bunx skills add ./skills --list
+bunx skills add ./skills/git-commit
 ```
 
 ## dev
