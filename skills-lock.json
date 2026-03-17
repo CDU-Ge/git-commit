@@ -4,7 +4,7 @@
     "git-commit": {
       "source": "/home/ge/Projects/git-commit/skills/git-commit",
       "sourceType": "local",
-      "computedHash": "50f135d4da9aa1348c5175c1bd734dc404f8b7042820b457d5611374f5ac3d1e"
+      "computedHash": "395cb5df095122f91835e22a08c72c9aa10fec8170b7b01befe43d3049a603fc"
     },
     "skill-creator": {
       "source": "anthropics/skills",
