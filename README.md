@@ -5,7 +5,7 @@ agent skills
 ## install
 
 ```shell
-bunx skills add ./skills/git-commit
+bunx skills add git@github.com:CDU-Ge/git-commit.git/skills
 ```
 
 ## dev

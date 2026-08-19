@@ -2,14 +2,16 @@
   "version": 1,
   "skills": {
     "git-commit": {
-      "source": "/home/ge/Projects/git-commit/skills/git-commit",
-      "sourceType": "local",
-      "computedHash": "c272be763aa8974828b20a0ebec6dd55e8222b52724d474422fe7bd021958f4c"
+      "source": "CDU-Ge/git-commit",
+      "sourceType": "github",
+      "skillPath": "skills/git-commit/SKILL.md",
+      "computedHash": "cc181b846125c5d5fff8a1d4940f078aa24e30a025a4cce15f5356b15b516705"
     },
     "skill-creator": {
       "source": "anthropics/skills",
       "sourceType": "github",
-      "computedHash": "b122f4d1e91aa1d83027e050b5b37c3156203ee85458d7b1360bc48167c9e02a"
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "computedHash": "5ea13a6d9f0d4bb694405d79acd00cadec0d21bb138c4dd10fcf3c500cb835c2"
     }
   }
 }
